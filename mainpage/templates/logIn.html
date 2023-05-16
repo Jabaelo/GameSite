@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <meta http-equiv = "X-UA-Complitble" content = "ie = edge">
+    <title>CyberSportUz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .loginbtn {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 20%;
+      opacity: 0.9;
+      position: absolute;
+      left: 38%;
+      transform: translateY(650%);
+    }
+    </style>
+</head>
+<body style=" background-color:rgba(253, 245, 230);">
+    <div class = "d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 shadow-sm" style=" background-color:rgba(0, 0, 0);">
+        <h5 class = "my-0 mr-md-auto font-weight-normal" style="color: white;">CyberSportUz</h5>
+        <nav class = "my-2 my-md-0 mr-md-3">
+            <a class = "p-2" href="{% url 'home' %}" style="color: white;">Главная</a>
+        </nav>
+    </div>
+    <div style="position: absolute;  left: 29.7%;  transform: translateY(3%); background-color: black; height: 70%; width: 37%; border-radius: 50%;"></div>
+    <h2 style="color: white; position: absolute;  left: 40%; transform: translateY(540%);" >Впишите ваш айди</h2>
+        <div style="position: absolute;  left: 40.3%; transform: translateY(575%);">
+            <input type="text" placeholder="Enter ID" name="ID" style="height: 50px; width: 300px">
+        </div>
+        <button class="loginbtn" onclick="document.location = '{% url 'home' %}'">Войти</button>
+
+</body>
+</html>

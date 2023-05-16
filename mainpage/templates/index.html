@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <meta http-equiv = "X-UA-Complitble" content = "ie = edge">
+    <title>CyberSportUz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body style=" background-color:rgba(253, 245, 230);">
+    <div class = "d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 shadow-sm" style=" background-color:rgba(0, 0, 0);">
+        <h5 class = "my-0 mr-md-auto font-weight-normal" style="color: white;">CyberSportUz</h5>
+        <nav class = "my-2 my-md-0 mr-md-3">
+            <a class = "p-2" href="{% url 'login' %}" style="color: white;">Войти</a>
+        </nav>
+    </div>
+    <div class="container">
+        {% for i in all_games %}
+            <div class="alert align-middle" >
+                <img src="/{{ i.game_photo }}" width="700" height="200">
+                <h4>{{ i.game_name }}</h4>
+                <p>{{ i.game_info }}</p>
+                <a href="game/{{ i.id }}" style="color: black;">
+                    <b>Подробнее</b>
+                </a>
+            </div>
+        <hr style="color: red; background-color: black; height: 0.8px">
+        {% endfor %}
+    </div>
+    <h4><b style="position: absolute; color: black; transform: translateY(100%); left: 42%">© 2023 by JAproject</b></h4>
+    <h6><b style="position: absolute; color: black; transform: translateY(50%); left: 90%">Telegram<p> @Maksyi</p></b></h6>
+    <h6><b style="position: absolute; color: black; transform: translateY(50%); left: 4%">Telegram<p> @akkidtheman</p></b></h6>
+
+
+</body>
+</html>
